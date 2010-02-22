@@ -1,0 +1,17 @@
+<%- stylesheets "index", "lightbox" %>
+<%- javascripts :defaults %>
+
+<% title_page(" - Fotos Fábrica") %>
+<div id="pnlAllFotos">
+	<%= title("Fotos", "da Fábrica") %>
+	<br />
+<div id="fotos_fabrica">
+
+<% if @factories.empty? %>
+		<b>Ainda não temos nenhuma foto.</b>
+<% else %>		
+	<h3>Confira as fotos da empresa</h3>
+	<% @factories.each do |f| %>
+		<%= lightbox_image_tag(f.photo.url(:small), f.photo.url(:larger), :title => "teste", :rel => "lightbox[group]") %>
+	<% end %>
+<% end %>

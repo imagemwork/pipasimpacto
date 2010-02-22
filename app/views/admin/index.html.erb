@@ -1,0 +1,65 @@
+<h2 class="title-fotos">PRODUTOS(<%= @products.size %>)</h2>
+<% form_tag :action => "check_products" do %>
+	<%= submit_tag "Excluir Marcados" %>
+	<table class="table-listing">
+		<tr>
+		  <th>Produto</th>
+		</tr>
+		<% unless @products.empty? %>
+			<% @products.each do |p| %>
+				<tr>
+					<td><%=h p.title %></td>
+					<td><%= link_to 'Editar', edit_product_path(p) %></td>
+					<td><%= link_to 'Deletar', p, :confirm => 'Are you sure?', :method => :delete %></td>
+					<td><%= check_box_tag "p_id[]", p.id %></td>
+				</tr>
+			<% end %>
+		<% else %>
+			<td>Ainda não temos nenhum produto cadastrado.</td>
+		<% end %> 
+	</table>
+<% end %> 
+<%= link_to 'Novo Produto', new_product_path %><br><br>
+
+<h2 class="title-fotos">FOTOS(<%= @fotos.size %>)</h2>
+<% form_tag :action => "check_fotos" do %>
+	<%= submit_tag "Excluir Marcados" %>
+	<table class="table-listing">
+		<tr>
+		  <th>Foto</th>
+		</tr>
+		<% unless @fotos.empty? %>
+		<% @fotos.each do |f| %>
+			<tr>
+				<td><%= f.photo_file_name %></td>
+				<td><%= link_to 'Detalhes', f %></td>
+				<td><%= link_to 'Deletar', f, :confirm => 'Are you sure?', :method => :delete %></td>
+				<td><%= check_box_tag "f_id[]", f.id %></td>
+			</tr>
+		<% end %>
+		<% else %>
+			<td>Ainda não temos nenhuma foto cadastrada.</td>
+		<% end %> 
+	</table>
+<% end %> 
+
+<%= link_to 'Nova Foto', new_factory_path %><br><br>
+
+<h2 class="title-fotos">MENSAGENS(<%= @contatos.size %>)</h2>
+
+	<table class="table-listing">
+		<tr>
+		  <th>Nome</th>
+		  <th>E-mail</th>
+		  <th>Assun.</th>
+		  <th>Msg.</th>
+		</tr>
+		<% @contatos.each do |c| %>
+			<tr>
+				<td><%= c.nome %></td>
+				<td><%= c.email %></td>
+				<td><%= c.assunto %></td>
+				<td><%= c.mensagem %></td>
+			</tr>
+		<% end %>
+	</table>

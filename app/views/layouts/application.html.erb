@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+											"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="keywords" content="vinhos,pipas,cachaça,água,armazenamento" />
+		<meta name="author" content="Imagem Sinalização Pipas Impacto" />
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+		<title>Pipas Impacto  <%= yield(:title) || "do Brasil" %></title>
+		
+		<%= yield(:head) %>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			try {
+			var pageTracker = _gat._getTracker("UA-10863802-1");
+			pageTracker._trackPageview();
+			} catch(err) {}
+		</script>
+	</head>
+	<body>
+	
+	<div id="allDivs">
+		<div id="pnlHeader">
+			<p><%= image_tag("logo-impacto.jpg", :alt=> "Logo Impacto", :class=>"alignLogo") %></p>
+			
+			<div id="pnlSearch">
+			<% form_tag products_path , :method => 'get' do %>
+					<%= text_field_tag :busca, params[:busca], :class => "formSearch" %>
+					<%= image_submit_tag("botao-search.png", :name => nil, :class => "alignSubmitSearch") %> 
+			<% end %>
+			</div><!-- fim search -->
+			<p>
+	</p>
+		</div><!-- fim header -->
+		<div id="testemenu">
+		<div id="pnlMenu">
+			<ul>
+				<li class="menuHome"><%= link_to "Home", home_index_path %></li>
+				<li><%= link_to "Fotos", factories_path %></li>
+				<li><%= link_to "Produtos", products_path %></a></li>
+				<li><%= link_to "Clientes", :controller => "home", :action => "clientes" %></a></li>
+				<li><%= link_to "Contato", new_contact_path %></li>
+			</ul>
+		</div><!-- fim menu -->
+		</div>
+		
+		<div id="conteudo">
+			<%= yield %>
+			<div id="clear"></div>
+		</div>
+		
+		<div id="pnlFooter">
+			<div id="pnlTira"></div><br />
+			<%= link_to image_tag("assinatura.jpg", :border => "0"), "http://www.imagemsinalizacao.com" %>
+		</div>
+		
+		</div><!-- fim tudo -->
+			<%= yield(:javascripts) %>
+  </body>
+</html>

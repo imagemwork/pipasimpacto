@@ -1,0 +1,31 @@
+<div id="pnlContato">
+	<div id="alignFormulario">
+		<p>Campos que possuem <b>*</b> são de preenchimento obrigatório.</p><br />
+		<% form_for(@contact) do |f|  %>
+		  											 
+				<label for="contact_name">* Nome:</label>
+					<%= text_field "contact", "nome", :size => 30, :class => "forms" %><br />
+
+				<label for="contact_address">* Email:</label>
+					<%= text_field "contact", "email", :size => 30, :class => "forms" %><br />
+
+				<label for="contact_subject">* Assunto:</label>
+					<%= text_field "contact", "assunto", :size => 30, :class => "forms" %><br />
+				
+				<label for="contact_mensagem">* Mensgem:</label>
+				<%= text_area "contact", "mensagem", :rows => 4, :cols => 49, :class => "forms_area" %><br />
+
+				<%= submit_tag "Enviar", :class => "button-enviar" %>
+
+		<% end %>
+		<br /><br />
+		<p class="nota-formulario">
+			Rua do Comércio, 660<br />
+			Fone: (54) 3374-1105<br />
+			Cep: 99940-000
+			Ibiaçá/RS
+		</p>
+		
+	</div>
+
+</div>

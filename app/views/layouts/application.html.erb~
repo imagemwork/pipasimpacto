@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+											"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Pipas Impacto do Brasil</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<%= stylesheet_link_tag "index" %>
+		 <%= javascript_include_tag :defaults, 'live_validation' %>
+ 		<%= stylesheet_link_tag 'live_validation' %>
+
+		<%= javascript_include_tag "fancyzoom", "fancyzoom.min" %>
+		<script type="text/javascript" charset="utf-8">
+		$(document).observe('dom:loaded', function() {
+			$$("div.photo a").each(function(el) { new FancyZoom(el); })
+			new FancyZoom('medium_box_link', {width:400, height:300});
+			new FancyZoom('large_box_link');
+			new FancyZoom('flash_box_link');
+		});
+	</script>
+		
+	</head>
+	<body>
+
+		<div id="pnlHeader">
+			<p><%= image_tag("logo-impacto.jpg", :alt=> "Logo Impacto", :class=>"alignLogo") %></p>
+			<div id="pnlSearch">
+				<input type="text" class="formSearch">
+				<input type="image" src="../images/botao-search.png" class="alignSubmitSearch">
+			</div><!-- fim search -->
+		</div><!-- fim header -->
+		<div id="testemenu">
+		<div id="pnlMenu">
+			<ul>
+				<li class="menuHome"><%= link_to "Home", home_index_path %></li>
+				<li><a href="#">Fotos</a></li>
+				<li><%= link_to "Produtos", products_path %></a></li>
+				<li><%= link_to "Clientes", products_path %></a></li>
+				<li><%= link_to "Contato", new_contact_path %></li>
+			</ul>
+		</div><!-- fim menu -->
+		</div>
+			<%= yield %>
+		
+	</body>
+</html>

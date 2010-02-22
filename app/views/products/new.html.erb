@@ -1,0 +1,35 @@
+<h2 class="title-fotos">NOVO PRODUTO</h2>
+<% form_for :product, @product, :url => products_path, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :titulo %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :litros %>
+    <%= f.text_field :liters %>
+  </p>
+  <p>
+    <%= f.label :material %>
+    <%= f.text_field :stuff %>
+  </p>
+  <p>
+    <%= f.label :tamanho %>
+    <%= f.text_field :size %>
+  </p>
+  <p>
+  <%= f.label :foto %> 
+  	<%= f.file_field :photo %>
+  </p>
+  <p>
+  	
+    <%= f.submit 'Criar' %>
+  </p>
+<% end %>
+<%= link_to 'Voltar', :controller => "admin", :action => "index" %>
+

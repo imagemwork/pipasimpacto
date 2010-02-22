@@ -1,0 +1,16 @@
+<h1>Editando</h1>
+
+<br>
+<% form_for :factory, @factory, :url => edit_factory_path, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+
+   <%= f.label :photo %> 
+  	<%= f.file_field :photo %>
+  </p>
+  <p>
+  	
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+<%= link_to 'Voltar', :controller => "admin", :action => "index" %>
+

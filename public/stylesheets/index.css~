@@ -1,0 +1,215 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {background-color: #20302C ; font-size: 13px; font-family: Arial, Helvetica, Sans-serif;}
+img, div, input, a { behavior: url("../fixie6/iepngfix.htc") }
+
+#pnlHeader {
+	width: 100%;
+	height: 80px;
+	background-color: transparent;
+}
+	.alignLogo {
+		position: relative;
+		top: 10px;
+		left: 100px;
+	}
+	#pnlSearch {
+		width: 234px;
+		height: 28px;
+		position: absolute;	
+		top: 20px;
+		right: 110px;
+		background: #FAFFAF url("../images/fundo-search.jpg") no-repeat top left;
+	}
+		.formSearch {
+			width: 180px;
+			position: absolute;
+			left: 10px;
+			top: 5px;
+			font-weight: bold;
+			border: 0px solid #fff;
+			color: #666;
+		}
+		.alignSubmitSearch {
+			position: absolute;
+			right: -2px;
+			top: -2px;
+		}
+#testemenu {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	background: url("../images/fundo-menu.jpg") #F1F1F1 bottom left repeat-x;	
+}
+#pnlMenu {
+	width: 660px;
+	height: 35px;
+	background-image: url("../images/fundo-menu.jpg");
+	margin: 0 auto;
+	background: transparent	
+}
+	#pnlMenu ul {
+		list-style: none;
+		padding: 0;
+	}
+	#pnlMenu li {
+		float: left;
+	}
+	#pnlMenu li a {
+		background: url("../images/fundo-menu.jpg") #F1F1F1 bottom left repeat-x;
+		height: 35px;
+		line-height: 2.5em;
+		float: left;
+		font-size: 13px;
+		font-weight: bold;
+		width: 130px;
+		display: block;
+		text-transform: uppercase;
+		border-right: 0.1em solid #dcdce9;
+		color: #494848;
+		text-decoration: none;
+		text-align: center;
+	}
+		#pnlMenu li a:hover {
+			color: #fff;
+		}
+	#pnlMenu li.menuHome a {
+		background: url("../images/menu-home.png") transparent bottom left repeat-x;
+		height: 35px;
+		line-height: 2.5em;
+		float: left;
+		font-size: 14px;
+		font-weight: bold;
+		width: 130px;
+		display: block;
+		text-transform: uppercase;
+		border-right: none;
+		color: #FFF;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+#pnlSlogan {
+	width: 80%;
+	height: 200px;
+	background-color: #ccc;
+	text-align: center;
+	margin: 0 auto;
+}
+#pnlContent {
+	width: 80%;
+	height: 200px;
+	background-color: transparent;
+	margin: 0 auto;
+}
+	#pnlSobre {
+		width: 100%;
+		height: 120px;
+		color: #FFF;
+		background-color: transparent;
+	}
+	#pnlFotos {
+		width: 100%;
+		height: 100px;
+		color: #FFF;
+		background-color: transparent;
+	}
+	.photo {
+		display: inline;
+		float: left;
+		margin: 8px;
+	}
+	
+	.photo img{
+		padding: 2px;
+		border: 2px solid #CCC;
+	}
+		.photo img:hover {
+			border-bottom: 5px solid #80C31C;
+		}
+
+span.titulos {
+	text-transform: uppercase;
+	color: #80C31C;
+	font-weight: bold;
+}
+#pnlFooter {
+	width: 100%;
+	height: 80px;
+	background-color: #000;
+	color: #CCC;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	bottom: 0px;
+}
+
+#PnlAllProducts {
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+	display: table;
+	color: white;
+}
+	#pnlProducts {
+		width: 100%;
+		height: 130px;
+		margin: 15px auto;
+		padding: 10px; 
+		position: relative;
+		background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+		border-left: 10px solid #80C31C;
+		color: #000;
+	}
+		#pnlProducts li {
+			margin-left: 15px;
+		}
+		
+	.product-description {
+		position: absolute;
+		left: 150px;
+		top: 17px;
+	}
+	h3.product-titulos {
+		color: #666;
+		font-size: 17px;
+	}
+
+div#pnlContato {
+	width: 70%;
+	height: 350px;
+	margin: 0 auto;
+	padding: 10px;
+	background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+	border-left: 10px solid #80C31C;
+}
+	div#alignFormulario {
+		width: 500px;
+		height: auto;
+		margin: 0 auto;
+	}
+	#pnlContato label {
+		float: left;
+		margin: 5px 0px 5px 0px;
+		width: 7em;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	#pnlContato input.forms {
+		font-size: 17px;
+		margin: 5px 0px 5px 0px;
+	}
+	.nota-formulario {
+		color: #666;
+		text-align: center;
+		font-size: 14px;
+	}
+	.button-enviar {
+		float: left;
+		margin-left: 31.5em;
+		margin-top: 5px;
+	}

@@ -1,0 +1,22 @@
+<%- stylesheets "index" %>
+<% title_page(" - Clientes") %>
+
+<div id="pnlAllClientes">
+	<%= title("Nossos", "clientes") %>
+	<br />
+	<div id="pnlClientes">
+		<div id="pnlClientesLeft">
+			<%= image_tag("clientes.jpg", :class => "img-clientes") %>
+			<p align="justify">Seja você também nosso cliente, entre em contato conosco através dessa <%= link_to "página", new_contact_path %> e esclareça suas dúvidas, solicite um orçamento, teremos prazer em responder o mais breve possível.</p>
+		</div>
+		
+		<div id="pnlLogoClientes">
+			<ul class="ul-cliente">
+				<li><%= image_tag("tecno.png") %></li>
+				<li><%= image_tag("kiss.jpg") %></li>
+				<li><%= image_tag("cimisa.png") %></li>
+				<li><%= image_tag("sim_agro.png") %></li>
+			</ul>
+		</div>
+	</div>
+</div>

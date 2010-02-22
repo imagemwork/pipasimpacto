@@ -1,0 +1,27 @@
+<%- javascripts :defaults %>
+<%- stylesheets "index" %>
+
+<div id="pnlSlogan">
+	<%= image_tag("slogan.jpg") %>
+</div><!-- fim slogan -->
+
+<div id="pnlContent">
+	<div id="pnlSobre">
+		<%= title("Sobre", "a empresa") %>
+		Impacto do Brasil foi criada em julho de 2005 através de uma sociedade concreta e dinânica. A fábrica de artefatos plásticos Impacto do Brasil começou a operar na área de plásticos exatamente na produção de roto-moldagem, fabricando a pipa para vinhos e outras inúmeras peças sempre na busca por novas tecnologias para acompanhar as necessidades de nosso mercado consumidor. Depois de uma incansável pesquisa de mercado, viu-se a necessidade de construir um produto que realmente causa-se o impacto. Assim foi criado a pipa ou reservatório para vinhos, cachaça, vinagre, água e também para utilização de outros líquidos. Além disso, a Impacto do Brasil trabalha também na produção de peças para várias outras empresas no ramo agrícola como: tanques para pulverizadores, canecas ou casambas para elevadores de grãos, protetores para corrêas, reservatórios de água para marcadores de linhas e outras inúmeras peças.<br />
+		<p><b>Esperamos sua visita!<br />
+		Venha nos visitar, será uma satisfação em recebê-lo e ter você como nosso cliente!</b>
+	</div><!-- fim sobre -->
+	
+	<div id="pnlFotos">	
+		<br>
+		<%= title("Fotos", "Fábrica") %>
+		<div id="photos">
+			<p><%= image_tag("index_pictures.jpg") %></p>
+			
+			<div id="position-link">
+				<p><%= link_to "Veja todas as fotos", factories_path, :class => "link-allfotos" %></p>
+			</div>
+		</div>
+	</div><!-- fim fotos -->
+</div><!-- fim content -->

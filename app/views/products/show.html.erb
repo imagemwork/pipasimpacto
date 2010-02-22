@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @product.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <b>Liters:</b>
+  <%=h @product.liters %>
+</p>
+
+<p>
+  <b>Stuff:</b>
+  <%=h @product.stuff %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @product.size %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Voltar', :controller => "admin", :action => "index" %>

@@ -1,0 +1,52 @@
+<%- stylesheets "index", "lightbox" %>
+<%- javascripts :defaults %>
+
+<% title_page("- Nossos Produtos") %>
+<% unless @products == nil %>
+
+		<% if @products.length < 1 %>
+			<div id="statusBusca">
+				<b><%= image_tag("alert.png", :class => "align-alert") %> Ops, sua busca não retornou resultados</b>
+				<br /><br /><br />
+				<%= link_to "Veja todos os produtos", products_path %>
+			</div>
+		<% end %>
+<div id="PnlAllProducts">
+	
+	<% if @products.length >= 1 %>
+		<%= title("nossos", "produtos") %>	
+		Nossas pipas estão a venda nas seguintes cores: branca e carvalho.
+		O carvalho muito utilizado para o armazenamento de vinhos finos, pois o impede a passagem de luz, conservando sempre o seu vinho com a cor e sabor original com uma qualidade indispensável, não apresentando nenhum perigo de agregação de substâncias estranhas ao líquido armazenado ou desconformidade ao produto relativamente ao seu padrão de identidade e qualidade. Não oferece risco nenhum a sua saúde.
+		A pipa branca é bastante utilizada para que o cliente possa acompanhar os níveis de enximento e esvaziamento, também é bastante vendida para armazenar cachaça, vinagre, água, etc.
+	<% end %>
+	
+	
+	<% @products.each do |product| %>
+		<div id="pnlProducts">
+			<%= lightbox_image_tag(product.photo.url(:small), product.photo.url(:larger), :title => product.title, :rel => "lightbox[group]") %>
+			<div class="product-description">
+				<h3 class="product-titulos"><%=h product.title %></h3>
+				<li><b>Código: </b><%=h product.codigo %></li>
+				<li><b>Litragem: </b><%=h product.liters %> lts</li>
+				<li><b>Material: </b><%=h product.stuff %></li>
+				<li><b>Dimensões:  </b><%=h product.size %></li>
+				<li class="cores">
+					<b>Cores:</b>
+					<div class="branco">
+					
+						<% if product.liters == 18 %>
+							<%= lightbox_image_tag("/images/branco.jpg", "/images/18l.jpg", {:class=>"img-branca"},:title => product.title) %>
+						<% else %>
+							<%= lightbox_image_tag("/images/branco.jpg", "/images/branca.jpg", {:class=>"img-branca"},:title => product.title) %>
+						<% end %>
+
+					</div>
+					<div class="carvalho">
+						<%= lightbox_image_tag("/images/carvalho.jpg", "/images/Pipa_marron01.jpg", {:class=>"img-branca"}, :title => product.title) %>
+					</div>
+				</li>
+			</div>
+		</div>
+		<% end %>
+		
+<% end %>

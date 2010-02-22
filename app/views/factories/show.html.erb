@@ -1,0 +1,20 @@
+<p>
+	<%= image_tag(@factory.photo.url(:small)) %>
+</p>
+<p>
+  <b>Nome:</b>
+  <%=h @factory.photo_file_name %>
+</p>
+
+<p>
+  <b>Formato:</b>
+  <%=h @factory.photo_content_type %>
+</p>
+
+<p>
+  <b>Tamanho:</b>
+  <%=h @factory.photo_file_size %> Kbs
+</p>
+
+
+<%= link_to 'Voltar', :controller => "admin", :action => "index" %>

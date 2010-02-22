@@ -1,0 +1,391 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	height: 100%;
+}
+	
+* html #allDivs {
+      height: 100%;
+}
+
+#allDivs {
+	min-height: 100%;
+	position: relative;
+	clear: both;
+}
+
+body {background-color: #003B1B ; height: 100%; font-size: 13px; font-family: Arial, Helvetica, Sans-serif;}
+img, div, input, a { behavior: url("../fixie6/iepngfix.htc") }
+
+/* #20302C, 0 126 71 */
+
+#pnlHeader {
+	width: 100%;
+	height: 80px;
+	background-color: transparent;
+}
+	.alignLogo {
+		position: relative;
+		top: 10px;
+		left: 110px;
+	}
+	#pnlSearch {
+		width: 234px;
+		height: 28px;
+		position: absolute;	
+		top: 20px;
+		right: 110px;
+		background: #FAFFAF url("../images/fundo-search.jpg") no-repeat top left;
+	}
+		.formSearch {
+			width: 180px;
+			position: absolute;
+			left: 10px;
+			top: 5px;
+			font-weight: bold;
+			border: 0px solid #fff;
+			color: #666;
+		}
+		.alignSubmitSearch {
+			position: absolute;
+			right: -2px;
+			top: -2px;
+		}
+#testemenu {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	background: url("../images/fundo-menu.jpg") #F1F1F1 bottom left repeat-x;	
+}
+#pnlMenu {
+	width: 660px;
+	height: 35px;
+	background-image: url("../images/fundo-menu.jpg");
+	margin: 0 auto;
+	background: transparent	
+}
+	#pnlMenu ul {
+		list-style: none;
+		padding: 0;
+	}
+	#pnlMenu li {
+		float: left;
+	}
+	#pnlMenu li a {
+		background: url("../images/fundo-menu.jpg") #F1F1F1 bottom left repeat-x;
+		height: 35px;
+		line-height: 2.5em;
+		float: left;
+		font-size: 13px;
+		font-weight: bold;
+		width: 130px;
+		display: block;
+		text-transform: uppercase;
+		border-right: 0.1em solid #dcdce9;
+		color: #494848;
+		text-decoration: none;
+		text-align: center;
+	}
+		#pnlMenu li a:hover {
+			color: #fff;
+		}
+	#pnlMenu li.menuHome a {
+		background: url("../images/menu-home.png") transparent bottom left repeat-x;
+		height: 35px;
+		line-height: 2.5em;
+		float: left;
+		font-size: 14px;
+		font-weight: bold;
+		width: 130px;
+		display: block;
+		text-transform: uppercase;
+		border-right: none;
+		color: #FFF;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+#pnlSlogan {
+	width: 80%;
+	height: 220px;
+	background-color: transparent;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#pnlContent {
+	width: 800px;
+	height: 200px;
+	background-color: transparent;
+	margin: 0 auto;
+}
+	#pnlSobre {
+		width: 100%;
+		height: 170px;
+		color: #FFF;
+		text-align: justify;
+		background-color: transparent;
+	}
+	#pnlFotos {
+		width: 100%;
+		height: 100px;
+		color: #FFF;
+		background-color: transparent;
+	}
+	
+	#position-link {
+		float: left;
+		width: 100%;
+		height: auto;
+		background: transparent;
+	}
+		#position-link a {
+			margin-left: 10px;
+			text-decoration: none;
+			font-size: 14px;
+			color: #fff;
+		}
+		
+		#position-link a:hover {
+			text-decoration: underline;
+		}
+	
+	.photo {
+		display: inline;
+		float: left;
+		margin: 8px;
+	}
+	
+	.photo img{
+		border: none;
+	}
+
+span.titulos {
+	text-transform: uppercase;
+	color: #80C31C;
+	font-weight: bold;
+}
+
+#PnlAllProducts {
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	color: white;
+	padding: 10px;
+	text-align: justify;
+}
+	#pnlProducts {
+		width: 96%;
+		height: 130px;
+		margin: 15px auto;
+		padding: 10px; 
+		position: relative;
+		background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+		border-left: 10px solid #80C31C;
+		color: #000;
+	}
+		#pnlProducts img {
+			border: none;
+		}
+		#pnlProducts li {
+			margin-left: 40px;
+		}
+		
+	.product-description {
+		position: absolute;
+		left: 120px;
+		top: 17px;
+	}
+	h3.product-titulos {
+		color: #666;
+		font-size: 17px;
+		margin-left: 20px;
+	}
+
+div#pnlAllContato {
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	color: white;
+}
+
+div#pnlContato {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	color: black;
+	position: relative;
+	padding: 10px;
+	background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+	border-left: 10px solid #80C31C;
+}
+	div#alignFormulario {
+		width: 500px;
+		height: auto;
+		margin: 0 auto;
+	}
+	#pnlContato label {
+		float: left;
+		margin: 5px 0px 5px 0px;
+		width: 7em;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	#pnlContato input.forms {
+		width: 350px;
+		font-size: 17px;
+		margin: 5px 0px 5px 0px;
+	}
+	.forms_area {
+		width: 350px;
+		height: 80px;
+	}
+	
+	.nota-formulario {
+		color: #666;
+		text-align: center;
+		font-size: 14px;
+	}
+	.button-enviar {
+		float: left;
+		margin-left: 31em;
+		.margin-left: 31.6em;
+		margin-top: 5px;
+	}
+	
+	
+#pnlAllClientes {
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	color: white;
+}
+#pnlClientes {
+	width: 100%;
+	height: 370px;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+	border-left: 10px solid #80C31C;
+	color: #000;
+}
+#pnlClientesLeft {
+	width: 400px;
+	height: 350px;
+	text-align: center;
+	float: left;
+}
+	#pnlLogoClientes {
+		width: 300px;
+		height: auto;
+		float: right;
+		text-align: center;
+	}
+	#clear {
+		clear: both
+	}
+	#conteudo {
+		padding-bottom: 110px;
+	}
+	#pnlFooter {
+		width: 100%;
+		background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 80px;
+    color: #CCC;
+    font-size: 14px;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#pnlTira {
+		width: 100%;
+		height: 5px;
+		.height: 2px;
+		background: #333;
+	}
+#fotos_fabrica img{
+	border:none;
+	margin: 10px;
+}
+#pnlAllFotos {
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	color: #fff;
+}
+	#fotos_fabrica {
+		width: 100%;
+		height: auto;
+		display: table;
+		padding: 5px;
+		background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+		border-left: 10px solid #80C31C;
+		color: #000;
+	}
+	#statusBusca {
+		width: 70%;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px; 
+		background: #FFF url("../images/curva-bottom.jpg") no-repeat bottom right;
+		border-left: 10px solid #80C31C;
+	}
+	.align-alert { position: relative; top: 2px; }
+	
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+.cores {
+	.width: 500px;
+	position: relative;
+}
+
+.branco {
+	width: 17px;
+	height: 10px;
+	border: 1px solid #000;
+	position: absolute;
+	bottom: 2px;
+	.top: 2px;
+	left: 43px;	
+}
+	.img-branca {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+.carvalho {
+	width: 17px;
+	height: 10px;
+	border: 1px solid #000;
+	position: absolute;
+	background: #59361F;
+	bottom: 2px;
+	.top: 2px;
+	left: 69px;
+}
+ul.ul-cliente li {
+	margin-left: 30px;
+	margin-top: 20px;
+	font-size: 20px;
+	list-style: none;
+}
+.img-contato {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}

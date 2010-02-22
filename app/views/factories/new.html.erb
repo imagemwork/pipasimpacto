@@ -1,0 +1,14 @@
+<br>
+<% form_for :factory, @factory, :url => factories_path, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+
+   <%= f.label :foto %> 
+  	<%= f.file_field :photo %><%= f.submit 'Criar' %>
+  </p>
+  <p>
+  	
+    
+  </p>
+<% end %>
+<%= link_to 'Voltar', :controller => "admin", :action => "index" %>
+

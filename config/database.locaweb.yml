@@ -1,0 +1,8 @@
+production:
+  adapter: mysql
+  encoding: utf8
+  database: pipasimpacto1
+  username: pipasimpacto1
+  password: impacto321
+  host: mysql01.pipasimpacto.com.br
+  pool: 5
